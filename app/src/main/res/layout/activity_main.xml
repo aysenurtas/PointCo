@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="50dp"
+            android:paddingBottom="35dp">
+
+            <TextView
+                android:id="@+id/txtLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PointCo"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yeni favori kahve noktanı keşfet ☕"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp" />
+
+            <EditText
+                android:id="@+id/editSearch"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/search_bg"
+                android:hint="Kafe ara..."
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/categoryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="22dp">
+
+                <LinearLayout
+                    android:layout_width="82dp"
+                    android:layout_height="82dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/card_bg"
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/categoryCoffee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="☕"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kahve"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="82dp"
+                    android:layout_height="82dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/card_bg"
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/categoryDessert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍰"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tatlı"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="82dp"
+                    android:layout_height="82dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/card_bg"
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/categoryStudy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💻"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Çalışma"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PointCo, konumuna göre yakınındaki kafeleri keşfetmeni ve favorilerine kaydetmeni sağlar."
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="22dp" />
+
+            <Button
+                android:id="@+id/btnDiscover"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="Kafeleri Keşfet  ›"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primaryOrange"
+                android:layout_marginTop="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="26dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yakındaki Popüler Mekanlar"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtSeeAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tümünü Gör  ›"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/popularScroll"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="14dp"
+                android:scrollbars="horizontal"
+                android:fadeScrollbars="false">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="190dp"
+                        android:layout_height="210dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/card_bg"
+                        android:layout_marginEnd="14dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="95dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/image_placeholder_bg" />
+
+                            <TextView
+                                android:layout_width="62dp"
+                                android:layout_height="27dp"
+                                android:gravity="center"
+                                android:text="Açık"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:background="@drawable/tag_bg"
+                                android:layout_gravity="end"
+                                android:layout_margin="8dp" />
+                        </FrameLayout>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="115dp"
+                            android:scrollbars="vertical"
+                            android:fadeScrollbars="false"
+                            android:nestedScrollingEnabled="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/heartFavorite"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="♡"
+                                    android:textColor="@color/primaryOrange"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="end" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Soulmate Coffee"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="⭐ 4.8" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="📶 Wifi Var" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="📍 0.3 km" />
+
+                                <TextView
+                                    android:id="@+id/reviewSoulmate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yorumları Gör"
+                                    android:textColor="@color/primaryOrange"
+                                    android:textStyle="bold"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="5dp" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="190dp"
+                        android:layout_height="210dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/card_bg"
+                        android:layout_marginEnd="14dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="95dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/image_placeholder_bg" />
+                        </FrameLayout>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="115dp"
+                            android:scrollbars="vertical"
+                            android:fadeScrollbars="false"
+                            android:nestedScrollingEnabled="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/heartCaribou"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="♡"
+                                    android:textColor="@color/primaryOrange"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="end" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Caribou Coffee"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="⭐ 4.7" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="☕ Kahve &amp; Tatlı" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="📍 0.5 km" />
+                                <TextView
+                                    android:id="@+id/reviewCaribou"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yorumları Gör"
+                                    android:textColor="@color/primaryOrange"
+                                    android:textStyle="bold"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="5dp" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="190dp"
+                        android:layout_height="210dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/card_bg"
+                        android:layout_marginEnd="14dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="95dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/image_placeholder_bg" />
+                        </FrameLayout>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="115dp"
+                            android:scrollbars="vertical"
+                            android:fadeScrollbars="false"
+                            android:nestedScrollingEnabled="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/heartStarbucks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="♡"
+                                    android:textColor="@color/primaryOrange"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="end" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Starbucks"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="⭐ 4.6" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="📶 Wifi Var" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="📍 0.7 km" />
+                                <TextView
+                                    android:id="@+id/reviewStarbucks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yorumları Gör"
+                                    android:textColor="@color/primaryOrange"
+                                    android:textStyle="bold"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="5dp" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="82dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/bottom_nav_bg"
+        android:elevation="12dp"
+        android:padding="8dp"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="🏠\nAna Sayfa"
+            android:textColor="@color/primaryOrange"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/navExplore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="📍\nKeşfet"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/navFavorites"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="🧡\nFavoriler"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="👤\nProfil"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
